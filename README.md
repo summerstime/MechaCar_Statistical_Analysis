@@ -35,11 +35,45 @@ Lot 3 does not and should be investigated further because it has the most variab
 
 ## T-Tests on Suspension Coils 
 
+* T-Tests were calculated for the data as a whole and also on each lot. The population mean was set to 1500 PSI for all tests.
 
+* T-Test for the whole resulted in a p-value of 0.06028 which is slightly greater than the standard 0.05 confidence level. The mean of PSI is 1498.78, which is less than the population value of 1500.
+* T-Test for Lot#1 shows that the p-value is equal to 1, which means the mean value of PSI for Lot#1 is equal to the PSI population mean of 1500. 
+* T-Test for Lot#2 shows a p-value of 0.6072, which is much greater than the standard 0.05 confidence level. Lot#2's mean is 1500.2. Slightly larger than the population's mean.
+* T-Test for Lot#3 shows a p-value of 0.04168, which is slightly less than the standard 0.05 level. Lot#3's mean value is 1496.14 which is less than the population's mean. This lot's results would also suggest that it is
+a strong contributor to the overall result's p-value being so close to the typical confidence level of 0.05.  
+[Lot#3 T-Test](http:\\github........t.test_for_Lot3.png)
 
+## Study Design: MechaCar vs Competition
 
+* The design of a study to compare the MechaCar to the competition must include those aspects that matter to the general consumer of automobiles. Several aspects that are considered when purchasing a new vehicle will be
+used for this study, such as price, MPG (highway and city), seating capacity, horsepower (HP), safety rating, frequency of maintenance, maintenance cost, style, luxury(electronics). The ordinal data will need a ranking system
+clarified to compare all competitors fairly to each other.
 
-If the Estimate is far enough away from zero, then the variable is significant. Subtract the zero from the estimate and divide by the std dev to get the t value.
-If the t value is very small then the variable is consider not significant.If the t value is large then p will be small and that is a significant variable.
-P value is less than the acceptance level 0.05 so you reject the null hypothesis.
-Pr value is a two sided answer and P may need to be divided by 2 to get one tail.
+* The hypothesis of the study is that MechaCar performs similarly to the Competition.
+	* Confidence Level = 0.05
+	* The Null Hypothesis (Ho) is that MechaCar performs equivalently to the Competition and that there is no difference.
+	* The Alternative Hypothesis (Ha) is that MechaCar performs better than the Competition.
+	* The Alternative Hypothesis (Hb) is that MechaCar performs worse than the Competition.
+
+* Statistical testing that will be used to determine this will be the following:
+	* First: Understanding the data collected: 
+		* Normally Distributed?
+		* Data Types of the columns?
+		* Numerical or String or Ranking, etc.?
+		* Ordinal Data? 
+		* Qualitative vs. Quantitative Data
+		* Quantity of data points?
+		* Null values? keep or discard?
+	* Second: Determine which tests can be used to compare the datasets.
+		* Descriptive Statistics - Price, MPG, HP, any continuous data that is not ordinal. Helps determine if the different competitors are roughly in the same "ball park" or if there is an outlier.
+		* T-Test - same as descriptive stats
+		* Multiple Linear Regression - same as descriptive stats. Useful for multiple independent variables.
+		* ANOVA - same as descriptive stats
+		* Correlation can be used on different data types. Different tests depending on type. Helps include and exclude data points for the study.
+	* Third: Learn more about the data by correlation and descriptive statistics and plotting of the data. Some of the results will lead you to different testing or determinations, such as not including data sets that are 
+clearly not significant to the comparison. This will also help tune-in the analysis and provide a result to either reject Ho and accept Ha or Hb or accept Ho and reject the alternatives.
+
+* What data is needed to run the statistical test?
+	* T-Test and ANOVA: Preferred data is normally distributed with a smooth bell shape without skewing. However, that is not always available.
+
